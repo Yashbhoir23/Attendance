@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Track your lecture attendance across all subjects. View percentages, get insights, and stay on top of your academics." />
+  <title>AttendEase – Lecture Attendance Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+  <!-- Ambient background -->
+  <div class="bg-blob blob-1" aria-hidden="true"></div>
+  <div class="bg-blob blob-2" aria-hidden="true"></div>
+  <div class="bg-blob blob-3" aria-hidden="true"></div>
+
+  <div class="app-container">
+
+    <!-- ─── Header ─── -->
+    <header class="app-header" id="app-header">
+      <div class="logo">
+        <span class="logo-icon">📚</span>
+        <div>
+          <h1>AttendEase</h1>
+          <p class="tagline">Your lecture attendance, simplified.</p>
+        </div>
+      </div>
+      <button class="btn btn-ghost btn-sm" id="reset-all-btn" title="Reset all data">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+        Reset
+      </button>
+    </header>
+
+    <!-- ─── Add Subject Bar ─── -->
+    <section class="quick-add glass-card" id="quick-add-section">
+      <form id="add-subject-form" autocomplete="off">
+        <div class="input-row">
+          <input type="text" id="subject-input" placeholder="Enter subject name..." maxlength="50" required />
+          <button type="submit" class="btn btn-primary" id="add-subject-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Add Subject
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ─── Overall Dashboard ─── -->
+    <section class="dashboard glass-card" id="dashboard" style="display:none;">
+      <div class="dashboard-row">
+        <div class="dash-stat">
+          <span class="dash-label">Overall</span>
+          <span class="dash-value" id="dash-pct">0%</span>
+        </div>
+        <div class="dash-stat">
+          <span class="dash-label">Total</span>
+          <span class="dash-value" id="dash-total">0</span>
+        </div>
+        <div class="dash-stat">
+          <span class="dash-label">Present</span>
+          <span class="dash-value green" id="dash-attended">0</span>
+        </div>
+        <div class="dash-stat">
+          <span class="dash-label">Absent</span>
+          <span class="dash-value red" id="dash-missed">0</span>
+        </div>
+        <div class="dash-bar-wrap">
+          <div class="dash-bar">
+            <div class="dash-bar-fill" id="dash-bar-fill"></div>
+          </div>
+        </div>
+      </div>
+      <p class="dash-insight" id="dash-insight"></p>
+    </section>
+
+    <!-- ─── Subjects Grid ─── -->
+    <section id="subjects-section">
+      <div class="subjects-grid" id="subjects-grid"></div>
+    </section>
+
+    <!-- ─── Empty State ─── -->
+    <section class="empty-state glass-card" id="empty-state">
+      <div class="empty-icon">🎓</div>
+      <h2>No Subjects Yet</h2>
+      <p>Add your first subject above and start tracking your attendance.</p>
+    </section>
+  </div>
+
+  <!-- ─── Bulk Add Modal ─── -->
+  <div class="modal-overlay" id="bulk-modal-overlay">
+    <div class="modal glass-card" id="bulk-modal">
+      <h3>Add Multiple Lectures</h3>
+      <p class="modal-subtitle" id="bulk-modal-subject"></p>
+      <form id="bulk-form" autocomplete="off">
+        <div class="modal-field">
+          <label for="bulk-total">Total lectures held</label>
+          <input type="number" id="bulk-total" min="1" max="999" placeholder="e.g. 30" required />
+        </div>
+        <div class="modal-field">
+          <label for="bulk-attended">Lectures you attended</label>
+          <input type="number" id="bulk-attended" min="0" max="999" placeholder="e.g. 25" required />
+        </div>
+        <p class="modal-error" id="bulk-error"></p>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-ghost" id="bulk-cancel">Cancel</button>
+          <button type="submit" class="btn btn-primary">Add Lectures</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ─── Confirm Modal ─── -->
+  <div class="modal-overlay" id="confirm-modal-overlay">
+    <div class="modal glass-card" id="confirm-modal">
+      <h3 id="confirm-title">Confirm</h3>
+      <p id="confirm-message">Are you sure?</p>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" id="confirm-cancel">Cancel</button>
+        <button class="btn btn-danger" id="confirm-ok">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Toast Container ─── -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

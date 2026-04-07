@@ -1,0 +1,204 @@
+{
+  "subjects": {
+    "Maths": {
+      "total": 46,
+      "attended": 16,
+      "records": [
+        {
+          "date": "2026-04-07 13:26",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "present"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        },
+        {
+          "date": "2026-04-07 13:26",
+          "status": "absent"
+        }
+      ]
+    },
+    "English": {
+      "total": 0,
+      "attended": 0,
+      "records": []
+    },
+    "Science": {
+      "total": 0,
+      "attended": 0,
+      "records": []
+    }
+  }
+}
